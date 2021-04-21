@@ -2,13 +2,11 @@ import path from 'path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
-import Layouts from 'vite-plugin-vue-layouts'
 import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons'
 import ViteComponents from 'vite-plugin-components'
 import Markdown from 'vite-plugin-md'
 import WindiCSS from 'vite-plugin-windicss'
 import { VitePWA } from 'vite-plugin-pwa'
-import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Prism from 'markdown-it-prism'
 
 export default defineConfig({
@@ -27,8 +25,6 @@ export default defineConfig({
       extensions: ['vue', 'md'],
     }),
 
-    // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
-    Layouts(),
 
     // https://github.com/antfu/vite-plugin-md
     Markdown({
@@ -94,10 +90,7 @@ export default defineConfig({
       },
     }),
 
-    // https://github.com/intlify/vite-plugin-vue-i18n
-    VueI18n({
-      include: [path.resolve(__dirname, 'locales/**')],
-    }),
+  
   ],
   // https://github.com/antfu/vite-ssg
   ssgOptions: {

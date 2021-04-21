@@ -1,16 +1,3 @@
-<script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
-</script>
-
 <template>
-  <div>
-    {{ t('not-found') }}
-  </div>
+  <div>404 - Not Found</div>
 </template>
-
-<route lang="yaml">
-meta:
-  layout: 404
-</route>
